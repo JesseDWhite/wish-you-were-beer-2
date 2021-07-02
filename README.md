@@ -36,6 +36,10 @@ _This application will allow the user to add kegs to their tap list for customer
 _MIT © 2021 Jesse White_
 ## 🤳 Contact Information
 Jesse White _jesse.white6@gmail.com_
+<div align="center">
+  <h2>Component Diagram</h2>
+  <img src="./component-diagram.png">
+</div>
 
 # Getting Started with Create React App
 
