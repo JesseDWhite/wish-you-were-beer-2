@@ -25,6 +25,10 @@ class TapRoomControl extends React.Component {
     }
   }
 
+  handleEditClick = () => {
+    this.setState({ editing: true });
+  }
+
   handleAddingNewTapToList = (newTap) => {
     const newMasterTapList = this.state.masterTapList.concat(newTap);
 
@@ -59,5 +63,23 @@ class TapRoomControl extends React.Component {
     this.setState({
       selectedTap: selectedTap
     });
+  }
+
+  render() {
+    let currentlyVisibleState = null;
+    let buttonText = null;
+
+    if (this.state.editing) {
+      currentlyVisibleState = <EditTicketForm
+        ticket={this.state.selectedTap}
+        onEditTap={this.handleEditingTapInList} />;
+      buttonText = "Reaturn To Tap List";
+    } else if (this.state.selectedTap != null) {
+      currentlyVisibleState = <TicketDetail
+        ticket={this.state.selectedTap}
+        onClickingEdit={this.handleEditClick}
+        onClickingDelete={this.handleDeletingTap} />;
+      buttonText = "Return To Tap List";
+    }
   }
 }
