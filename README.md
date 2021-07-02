@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://media.giphy.com/media/Y00c0w6xxtLn067SUi/giphy.gif" width="100px" />
+<img src="https://media.giphy.com/media/Y00c0w6xxtLn067SUi/giphy.gif" width="150px" />
 
 # _wish-you-were-beer_ 
 </div>
@@ -31,7 +31,7 @@ _This application will allow the user to add kegs to their tap list for customer
 ## 🐛 Known Bugs
 * _The background gradient repeats when more than three taps are added._
 * _Number input types do not accept float type entries._
-*_Functionality for selling pints is not yet working._
+* _Functionality for selling pints is not yet working._
 ## ⚖ License
 _MIT © 2021 Jesse White_
 ## 🤳 Contact Information
