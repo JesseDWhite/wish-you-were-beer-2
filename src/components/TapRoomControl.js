@@ -23,7 +23,7 @@ class TapRoomControl extends React.Component {
         editing: false
       })
     } else {
-      this.setState(prevState => ({ formVisisbleOnPage: !prevState.formVisisbleOnPage }));
+      this.setState(prevState => ({ formVisisbleOnPage: !prevState.formVisisbleOnPage, }));
     }
   }
 
@@ -89,7 +89,7 @@ class TapRoomControl extends React.Component {
     } else {
       currentlyVisibleState = <TapList
         tapList={this.state.masterTapList}
-        onNewTapSelection={this.handleChangingSelectedTap} />;
+        onTapSelection={this.handleChangingSelectedTap} />;
       buttonText = "Add New Tap"
     }
 
