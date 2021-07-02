@@ -36,12 +36,12 @@ class TapRoomControl extends React.Component {
 
     this.setState({
       masterTapList: newMasterTapList,
-      formVisisbleOnPage: flase
+      formVisisbleOnPage: false
     });
   }
 
   handleEditingTapInList = (tapToEdit) => {
-    const editMasterTapList = this.state.masterTapList.filter(tap => TapList.id !== this.state.selectedTap.id).concat(tapToEdit);
+    const editMasterTapList = this.state.masterTapList.filter(tap => tap.id !== this.state.selectedTap.id).concat(tapToEdit);
 
     this.setState({
       masterTapList: editMasterTapList,
@@ -101,3 +101,5 @@ class TapRoomControl extends React.Component {
     )
   }
 }
+
+export default TapRoomControl;
