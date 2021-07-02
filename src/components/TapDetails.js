@@ -6,11 +6,11 @@ function TapDetails(props) {
 
   return (
     <React.Fragment>
-      <h2>{props.name} Details</h2>
-      <h3>{props.brand}</h3>
-      <p>{props.price}</p>
-      <p>{props.alcoholContent}</p>
-      <p>{props.quantity}</p>
+      <h2>{tap.name} Details</h2>
+      <h3>{tap.brand}</h3>
+      <p>{tap.price}</p>
+      <p>{tap.alcoholContent}</p>
+      <p>{tap.quantity}</p>
 
       <button onClick={() => onClickingEdit(tap.id)}>Edit Tap Details</button>
       <button onClick={() => onClickingDelete(tap.id)}>Remove Tap</button>
