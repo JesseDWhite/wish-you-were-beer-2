@@ -21,6 +21,7 @@ Tap.propTypes = {
   price: PropTypes.number,
   alcoholContent: PropTypes.number,
   quantity: PropTypes.number,
+  id: PropTypes.string,
   whenTapClicked: PropTypes.func
 };
 

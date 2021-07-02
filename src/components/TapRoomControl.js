@@ -85,7 +85,7 @@ class TapRoomControl extends React.Component {
     } else if (this.state.formVisisbleOnPage) {
       currentlyVisibleState = <NewTapForm
         onNewTapCreation={this.handleAddingNewTapToList} />;
-      buttonText = "Add New Tap";
+      buttonText = "Add Tap";
     } else {
       currentlyVisibleState = <TapList
         tapList={this.state.masterTapList}
