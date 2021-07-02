@@ -1,6 +1,8 @@
 import React from 'react';
 import TapList from './TapList';
 import TapDetails from './TapDetails';
+import NewTapForm from './NewTapForm';
+import EditTapForm from './EditTapForm';
 
 class TapRoomControl extends React.Component {
   constructor(props) {
@@ -70,20 +72,32 @@ class TapRoomControl extends React.Component {
     let buttonText = null;
 
     if (this.state.editing) {
-      currentlyVisibleState = <EditTicketForm
-        ticket={this.state.selectedTap}
+      currentlyVisibleState = <EditTapForm
+        tap={this.state.selectedTap}
         onEditTap={this.handleEditingTapInList} />;
       buttonText = "Reaturn To Tap List";
     } else if (this.state.selectedTap != null) {
-      currentlyVisibleState = <TicketDetail
-        ticket={this.state.selectedTap}
+      currentlyVisibleState = <TapDetails
+        tap={this.state.selectedTap}
         onClickingEdit={this.handleEditClick}
         onClickingDelete={this.handleDeletingTap} />;
       buttonText = "Return To Tap List";
     } else if (this.state.formVisisbleOnPage) {
-      currentlyVisibleState = <NewTicketForm
+      currentlyVisibleState = <NewTapForm
         onNewTapCreation={this.handleAddingNewTapToList} />;
       buttonText = "Add New Tap";
+    } else {
+      currentlyVisibleState = <TapList
+        tapList={this.state.masterTapList}
+        onNewTapSelection={this.handleChangingSelectedTap} />;
+      buttonText = "Add New Tap"
     }
+
+    return (
+      <React.Fragment>
+        {currentlyVisibleState}
+        <button onClick={this.handleClick}>{buttonText}</button>
+      </React.Fragment>
+    )
   }
 }
