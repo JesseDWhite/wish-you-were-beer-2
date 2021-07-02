@@ -27,9 +27,20 @@ class TapRoomControl extends React.Component {
 
   handleAddingNewTapToList = (newTap) => {
     const newMasterTapList = this.state.masterTapList.concat(newTap);
+
     this.setState({
       masterTapList: newMasterTapList,
       formVisisbleOnPage: flase
+    });
+  }
+
+  handleEditingTapInList = (tapToEdit) => {
+    const editMasterTapList = this.state.masterTapList.filter(tap => TapList.id !== this.state.selectedTap.id).concat(tapToEdit);
+
+    this.setState({
+      masterTapList: editMasterTapList,
+      editing: false,
+      selectedTap: null
     });
   }
 }
