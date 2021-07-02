@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://media.giphy.com/media/Y00c0w6xxtLn067SUi/giphy.gif" width="150px" />
+<img src="https://media.giphy.com/media/iB1AXAPPuKYCc/giphy.gif" width="150px" />
 
 # _wish-you-were-beer_ 
 </div>
