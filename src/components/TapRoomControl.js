@@ -43,4 +43,13 @@ class TapRoomControl extends React.Component {
       selectedTap: null
     });
   }
+
+  handleDeletingTap = (id) => {
+    const newMasterTapList = this.state.masterTapList.filter(tap => tap.id !== id);
+
+    this.setState({
+      masterTapList: newMasterTapList,
+      selectedTap: null
+    });
+  }
 }
