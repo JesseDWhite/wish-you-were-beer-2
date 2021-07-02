@@ -7,6 +7,7 @@ function TapList(props) {
     <React.Fragment>
       {props.tapList.map((tap) =>
         <Tap
+          whenTapClicked={props.onTapSelection}
           name={tap.name}
           brand={tap.brand}
           price={tap.price}
