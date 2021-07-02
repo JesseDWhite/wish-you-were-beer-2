@@ -52,4 +52,12 @@ class TapRoomControl extends React.Component {
       selectedTap: null
     });
   }
+
+  handleChangingSelectedTap = (id) => {
+    const selectedTap = this.state.masterTapList.filter(tap => tap.id === id)[0];
+
+    this.setState({
+      selectedTap: selectedTap
+    });
+  }
 }
