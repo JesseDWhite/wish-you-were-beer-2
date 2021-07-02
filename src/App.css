@@ -1,10 +1,19 @@
-#root {
-  margin: 30px;
-  padding: 15px;
+
+h1 {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.356);
 }
 
-h1,em {
+h2,h3 {
+  font-family: 'Lobster', cursive;
+}
+
+em {
   text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 20px;
 }
 
 button {
@@ -15,22 +24,31 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  height: 100vh;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .card {
   width: 70%;
-  background-color: #CFD8DC;
+  background-color: rgba(207, 216, 220, 0.651);
   border-radius: 25px;
+  padding: 30px;
+  border: none;
 }
 
 body {
   background: linear-gradient(rgb(69, 69, 255), pink);
-  height: 100vh
+  height: 100%
 }
 
 #beer-image {
-  width: 200px;
+  width: 250px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.tap-card {
+  width: 100%;
+  margin-top: 10px;
 }
