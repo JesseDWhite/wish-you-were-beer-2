@@ -14,7 +14,8 @@ function TapList(props) {
           alcoholContent={tap.alcoholContent}
           quantity={tap.quantity}
           id={tap.id}
-          key={tap.id} />
+          key={tap.id}
+        />
       )}
     </React.Fragment>
   )
