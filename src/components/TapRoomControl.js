@@ -80,6 +80,10 @@ class TapRoomControl extends React.Component {
         onClickingEdit={this.handleEditClick}
         onClickingDelete={this.handleDeletingTap} />;
       buttonText = "Return To Tap List";
+    } else if (this.state.formVisisbleOnPage) {
+      currentlyVisibleState = <NewTicketForm
+        onNewTapCreation={this.handleAddingNewTapToList} />;
+      buttonText = "Add New Tap";
     }
   }
 }
