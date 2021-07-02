@@ -5,11 +5,13 @@ function Tap(props) {
   return (
     <React.Fragment>
       <div onClick={() => props.whenTapClicked(props.id)}>
-        <h2>{props.name}</h2>
-        <h3>{props.brand}</h3>
-        <p>{props.price}</p>
-        <p>{props.alcoholContent}</p>
-        <p>{props.quantity}</p>
+        <div class="row">
+          <h2>{props.name}</h2>
+          <h3>{props.brand}</h3>
+          <p>{props.price}</p>
+          <p>{props.alcoholContent}</p>
+          <p>{props.quantity}</p>
+        </div>
       </div>
     </React.Fragment>
   )
