@@ -11,7 +11,8 @@ class TapRoomControl extends React.Component {
       formVisisbleOnPage: false,
       masterTapList: [],
       selectedTap: null,
-      editing: false
+      editing: false,
+      sellingPints: false
     };
   }
 
@@ -20,7 +21,8 @@ class TapRoomControl extends React.Component {
       this.setState({
         formVisisbleOnPage: false,
         selectedTap: null,
-        editing: false
+        editing: false,
+        sellingPints: false
       })
     } else {
       this.setState(prevState => ({ formVisisbleOnPage: !prevState.formVisisbleOnPage, }));
@@ -96,7 +98,7 @@ class TapRoomControl extends React.Component {
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>
+        <button className="btn btn-primary mt-3" onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     )
   }

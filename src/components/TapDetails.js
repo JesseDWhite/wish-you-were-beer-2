@@ -11,9 +11,8 @@ function TapDetails(props) {
       <p>{tap.price}</p>
       <p>{tap.alcoholContent}</p>
       <p>{tap.quantity}</p>
-
-      <button onClick={props.onClickingEdit}>Edit Tap Details</button>
-      <button onClick={() => onClickingDelete(tap.id)}>Remove Tap</button>
+      <button className="btn btn-success mb-3" onClick={props.onClickingEdit}>Edit Tap Details</button>
+      <button className="btn btn-danger mb-3" onClick={() => onClickingDelete(tap.id)}>Remove Tap</button>
     </React.Fragment>
   )
 }
