@@ -24,4 +24,12 @@ class TapRoomControl extends React.Component {
       this.setState(prevState => ({ formVisisbleOnPage: !prevState.formVisisbleOnPage }));
     }
   }
+
+  handleAddingNewTapToList = (newTap) => {
+    const newMasterTapList = this.state.masterTapList.concat(newTap);
+    this.setState({
+      masterTapList: newMasterTapList,
+      formVisisbleOnPage: flase
+    });
+  }
 }
