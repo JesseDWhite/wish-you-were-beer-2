@@ -11,7 +11,7 @@ function NewTapForm(props) {
   };
 
   NewTapForm.propTypes = {
-    onNewTapCreation: PropTypes.func
+    onNewTapCreation: PropTypes.func,
   };
 
   return (

@@ -12,18 +12,25 @@ class TapRoomControl extends React.Component {
       masterTapList: [],
       selectedTap: null,
       editing: false,
-      pints: 0
+      pints: 124
     };
   }
 
-  handleSellingPint = (id) => {
-    const newPintValue = this.masterTapList.filter(tap => tap.id === id)[0]
-    // if (this.newPintValue > 0) {
+  // handleSellingPint = (id) => {
+  //   const newPintValue = this.masterTapList.filter(tap => tap.id === id)[0]
+  //   if (this.newPintValue > 0) {
+  //   this.setState({
+  //     selectedTap: newPintValue,
+  //     pints: this.state.pints - 1
+  //   });
+  //   }
+  // }
+
+  handleSellingPint = () => {
+    console.log(this.state.pints)
     this.setState({
-      selectedTap: newPintValue,
-      pints: this.state.pints - 1
+      pints: this.state.pints - 1,
     });
-    // }
   }
 
   handleClick = () => {
