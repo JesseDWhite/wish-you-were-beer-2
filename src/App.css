@@ -1,3 +1,8 @@
+body {
+  background-image: linear-gradient(rgb(69, 69, 255), pink);
+  background-attachment: fixed;
+  height: 100%;
+}
 
 h1 {
   font-family: 'Lobster', cursive;
@@ -20,13 +25,23 @@ button {
   width: 100%;
 }
 
+.btn-custom {
+  border-radius: 20px;
+}
+
+.btn-custom-sm {
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 20px;
+  width: 50%;
+}
+
 .container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
   margin-top: 30px;
-  margin-bottom: 30px;
 }
 
 .card {
@@ -35,11 +50,7 @@ button {
   border-radius: 25px;
   padding: 30px;
   border: none;
-}
-
-body {
-  background: linear-gradient(rgb(69, 69, 255), pink);
-  height: 100%;
+  margin-bottom: 30px;
 }
 
 #beer-image {

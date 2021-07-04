@@ -31,11 +31,12 @@ function ReusableForm(props) {
         />
         <input
           type='number'
-          name='quantity'
+          name='pints'
+          value='124'
           placeholder='Number of Pints Availible'
           className='form-control mb-3'
         />
-        <button type="submit" className="btn btn-success">{props.buttonText}</button>
+        <button type="submit" className="btn btn-success btn-custom">{props.buttonText}</button>
       </form>
     </React.Fragment>
   )

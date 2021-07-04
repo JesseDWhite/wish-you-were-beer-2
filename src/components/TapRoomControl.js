@@ -12,8 +12,18 @@ class TapRoomControl extends React.Component {
       masterTapList: [],
       selectedTap: null,
       editing: false,
-      sellingPints: false
+      pints: 0
     };
+  }
+
+  handleSellingPint = (id) => {
+    const newPintValue = this.masterTapList.filter(tap => tap.id === id)[0]
+    // if (this.newPintValue > 0) {
+    this.setState({
+      selectedTap: newPintValue,
+      pints: this.state.pints - 1
+    });
+    // }
   }
 
   handleClick = () => {
@@ -22,7 +32,6 @@ class TapRoomControl extends React.Component {
         formVisisbleOnPage: false,
         selectedTap: null,
         editing: false,
-        sellingPints: false
       })
     } else {
       this.setState(prevState => ({ formVisisbleOnPage: !prevState.formVisisbleOnPage, }));
@@ -91,14 +100,15 @@ class TapRoomControl extends React.Component {
     } else {
       currentlyVisibleState = <TapList
         tapList={this.state.masterTapList}
-        onTapSelection={this.handleChangingSelectedTap} />;
+        onTapSelection={this.handleChangingSelectedTap}
+        onSaleOfPint={this.handleSellingPint} />;
       buttonText = "Add New Tap"
     }
 
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        <button className="btn btn-primary mt-3" onClick={this.handleClick}>{buttonText}</button>
+        <button className="btn btn-primary mt-3 btn-custom" onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     )
   }
