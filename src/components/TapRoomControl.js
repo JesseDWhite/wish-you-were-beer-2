@@ -45,12 +45,9 @@ class TapRoomControl extends React.Component {
   handleClick = () => {
     if (this.state.selectedTap != null) {
       this.setState({
-        formVisisbleOnPage: false,
         selectedTap: null,
         editing: false,
       })
-    } else {
-      this.setState(prevState => ({ formVisisbleOnPage: !prevState.formVisisbleOnPage }));
     }
   }
 
