@@ -4,7 +4,8 @@ import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
   formVisibleOnPage: formVisibleOnPageReducer,
-  masterTapList: tapListReducer
+  masterTapList: tapListReducer,
+  editing: formVisibleOnPageReducer
 })
 
 export default rootReducer;

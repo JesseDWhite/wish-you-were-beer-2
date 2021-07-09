@@ -9,7 +9,8 @@ describe("rootReducer", () => {
   test('Should return default state if no action type is given', () => {
     expect(rootReducer({}, { type: null })).toEqual({
       masterTapList: {},
-      formVisibleOnPage: false
+      formVisibleOnPage: false,
+      editing: false
     });
   });
   test('Check that initial state of tapListReducer matches root reducer', () => {
