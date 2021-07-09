@@ -12,6 +12,7 @@ function ReusableForm(props) {
               name='name'
               placeholder='Name of Tap'
               className='form-control mb-3'
+              required
             />
           </div>
           <div className="col-6">
@@ -20,34 +21,42 @@ function ReusableForm(props) {
               name='brand'
               placeholder='Tap Maker'
               className='form-control mb-3'
+              required
             />
           </div>
           <div className="col-4">
-            <label for='price' className='form-label'>Price</label>
+            <label htmlFor='price' className='form-label'>Price</label>
             <input
-              type='number'
+              type='float'
               name='price'
               placeholder='Price Per Pint'
               className='form-control mb-3'
+              min="0"
+              step=".01"
+              required
             />
           </div>
           <div className="col-4">
-            <label for='price' className='form-label'>Alcohol Content</label>
+            <label htmlFor='price' className='form-label'>Alcohol Content</label>
             <input
-              type='number'
+              type='float'
               name='alcoholContent'
               placeholder='Alcohol Content'
               className='form-control mb-3'
+              min="0"
+              step=".01"
+              required
             />
           </div>
           <div className="col-4 mb-5">
-            <label for='pints' className='form-label'>Number of Pints Availible</label>
+            <label htmlFor='pints' className='form-label'>Number of Pints Availible</label>
             <input
               type='number'
               name='pints'
-              initialvalue='124'
               placeholder='Number of Pints Availible'
               className='form-control mb-3'
+              min="0"
+              required
             />
           </div>
         </div>

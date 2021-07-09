@@ -63,3 +63,30 @@ button {
   width: 100%;
   margin-top: 10px;
 }
+
+#sell-button {
+  justify-content: center;
+  height: 80%;
+  margin-top: 15px;
+  font-size: 50px;
+  font-family: 'Shadows Into Light', cursive;
+  border: none;
+}
+
+#sell-button:hover {
+  color: rgb(2, 180, 2);
+}
+
+#sell-button:active{
+  background-color: rgba(2, 180, 2, 0.404);
+  color: white;
+}
+
+.status {
+  color: red;
+  font-weight: bold;
+}
+
+#sell-button-img {
+  width: 45%;
+}

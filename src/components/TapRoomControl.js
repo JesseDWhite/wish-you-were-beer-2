@@ -16,20 +16,26 @@ class TapRoomControl extends React.Component {
   }
 
   handleSellingPint = () => {
-    console.log(this.state.pints)
     const selectedTap = this.state.selectedTap
-    console.log(selectedTap);
     const newSelectedTap = Object.assign({}, selectedTap, { pints: selectedTap.pints - 1 })
     const editMasterTapList = this.state.masterTapList.filter(tap => tap.id !== this.state.selectedTap.id).concat(newSelectedTap);
     if (selectedTap.pints >= 1) {
 
       this.setState({
         masterTapList: editMasterTapList,
-        selectedTap: null,
+        selectedTap: newSelectedTap,
         editing: false
       });
     } else {
-      console.log("you are all out")
+      const selectedTap = this.state.selectedTap
+      const outOfPints = Object.assign({}, selectedTap, { status: selectedTap.status = "OUT OF STOCK" });
+      const editMasterTapList = this.state.masterTapList.filter(tap => tap.id !== this.state.selectedTap.id).concat(outOfPints);
+
+      this.setState({
+        masterTapList: editMasterTapList,
+        selectedTap: outOfPints,
+        editing: false
+      })
     }
   }
 
@@ -99,7 +105,7 @@ class TapRoomControl extends React.Component {
         tap={this.state.selectedTap}
         onClickingEdit={this.handleEditClick}
         onClickingDelete={this.handleDeletingTap}
-        handleSellingPint={this.handleSellingPint} />; //move to the details page because it will have a selected tap at that time
+        handleSellingPint={this.handleSellingPint} />;
       buttonText = "Return To Tap List";
     } else if (this.state.formVisisbleOnPage) {
       currentlyVisibleState = <NewTapForm

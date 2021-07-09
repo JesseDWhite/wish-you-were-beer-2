@@ -14,6 +14,7 @@ function TapList(props) {
           price={tap.price}
           alcoholContent={tap.alcoholContent}
           pints={tap.pints}
+          status={tap.status}
           id={tap.id}
           key={tap.id}
         />
@@ -25,7 +26,7 @@ function TapList(props) {
 TapList.propTypes = {
   tapList: PropTypes.array,
   onTapSelection: PropTypes.func,
-  handleSellingPint: PropTypes.func
+  handleSellingPint: PropTypes.func,
 }
 
 export default TapList;

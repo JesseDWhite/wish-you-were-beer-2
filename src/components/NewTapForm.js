@@ -6,8 +6,9 @@ import { v4 } from 'uuid';
 function NewTapForm(props) {
   function handleNewTapFormSubmission(event) {
     event.preventDefault();
+    const { name, brand, price, alcoholContent, pints } = event.target;
 
-    props.onNewTapCreation({ name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, alcoholContent: event.target.alcoholContent.value, pints: event.target.pints.value, id: v4() });
+    props.onNewTapCreation({ name: name.value, brand: brand.value, price: parseFloat(price.value).toFixed(2), alcoholContent: parseFloat(alcoholContent.value).toFixed(1), pints: parseInt(pints.value), id: v4() });
   };
 
   NewTapForm.propTypes = {
