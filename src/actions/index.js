@@ -11,4 +11,13 @@ export const toggleForm = () => ({
 
 export const addTap = (tap) => {
   const { name, brand, price, alcoholContent, pints, id } = tap;
+  return {
+    type: c.ADD_TAP,
+    name: name,
+    brand: brand,
+    price: price,
+    alcoholContent: alcoholContent,
+    pints: pints,
+    id: id
+  }
 }
