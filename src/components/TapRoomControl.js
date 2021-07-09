@@ -127,13 +127,13 @@ class TapRoomControl extends React.Component {
     if (this.state.editing) {
       currentlyVisibleState = <EditTapForm
         tap={this.state.selectedTap}
-        onEditTap={this.handleEditingTapInList} />;
+        onEditTap={this.props.handleEditingTapInList} />;
       buttonText = "Reaturn To Tap List";
     } else if (this.state.selectedTap != null) {
       currentlyVisibleState = <TapDetails
         tap={this.state.selectedTap}
         onClickingEdit={this.handleEditClick}
-        onClickingDelete={this.handleDeletingTap}
+        onClickingDelete={this.props.handleDeletingTap}
         handleSellingPint={this.handleSellingPint} />;
       buttonText = "Return To Tap List";
     } else if (this.state.formVisisbleOnPage) {
@@ -143,14 +143,14 @@ class TapRoomControl extends React.Component {
     } else {
       currentlyVisibleState = <TapList
         tapList={this.props.masterTapList}
-        onTapSelection={this.handleChangingSelectedTap} />;
+        onTapSelection={this.props.handleChangingSelectedTap} />;
       buttonText = "Add New Tap"
     }
 
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        <button className="btn btn-primary mt-3 btn-custom" onClick={this.handleClick}>{buttonText}</button>
+        <button className="btn btn-primary mt-3 btn-custom" onClick={this.props.handleClick}>{buttonText}</button>
       </React.Fragment>
     )
   }
