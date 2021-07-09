@@ -6,7 +6,6 @@ import EditTapForm from './EditTapForm';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as a from './../actions'
-import { tap } from 'lodash';
 
 class TapRoomControl extends React.Component {
   constructor(props) {
