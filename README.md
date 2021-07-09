@@ -30,9 +30,7 @@ _This application will allow the user to add kegs to their tap list for customer
     * _Optionally, run the command `npm run build` to make a bundle of the files_
     * _Finally, run the command `npm run start` to start a development server_
 ## 🐛 Known Bugs
-* _The background gradient repeats when more than three taps are added._
-* _Number input types do not accept float type entries._
-* _Functionality for selling pints is not yet working._
+* _The whole thing doesn't work._
 ## ⚖ License
 _MIT © 2021 Jesse White_
 ## 🤳 Contact Information
