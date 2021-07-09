@@ -4,6 +4,25 @@ import * as c from '../../../actions/ActionTypes'
 describe('tapListReducer', () => {
   let action;
 
+  const currentState = {
+    1: {
+      name: "name",
+      brand: "brand",
+      price: 12.99,
+      alcoholContent: 6.7,
+      pints: 124,
+      id: 2
+    },
+    2: {
+      name: "name",
+      brand: "brand",
+      price: 12.99,
+      alcoholContent: 6.7,
+      pints: 124,
+      id: 2
+    }
+  }
+
   const tapData = {
     id: "5c495f3a-eda5-44f9-8632-10a5dce2e406",
     name: "name",
@@ -36,6 +55,23 @@ describe('tapListReducer', () => {
         alcoholContent,
         pints,
         id
+      }
+    })
+  })
+
+  test('Should successfully delete a tap when prompted', () => {
+    action = {
+      type: c.DELETE_TAP,
+      id: 1
+    };
+    expect(tapListReducer(currentState, action)).toEqual({
+      2: {
+        name: "name",
+        brand: "brand",
+        price: 12.99,
+        alcoholContent: 6.7,
+        pints: 124,
+        id: 2
       }
     })
   })
