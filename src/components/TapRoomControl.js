@@ -19,16 +19,16 @@ class TapRoomControl extends React.Component {
     const selectedTap = this.state.selectedTap
     const newSelectedTap = Object.assign({}, selectedTap, { pints: selectedTap.pints - 1 })
     const editMasterTapList = this.state.masterTapList.filter(tap => tap.id !== this.state.selectedTap.id).concat(newSelectedTap);
-    if (selectedTap.pints >= 1) {
+    if (selectedTap.pints > 1) {
 
       this.setState({
         masterTapList: editMasterTapList,
         selectedTap: newSelectedTap,
         editing: false
       });
-    } else {
+    } else if (selectedTap.pints === 1) {
       const selectedTap = this.state.selectedTap
-      const outOfPints = Object.assign({}, selectedTap, { status: selectedTap.status = "OUT OF STOCK" });
+      const outOfPints = Object.assign({}, selectedTap, { pints: selectedTap.pints - 1, status: selectedTap.status = "OUT OF STOCK" });
       const editMasterTapList = this.state.masterTapList.filter(tap => tap.id !== this.state.selectedTap.id).concat(outOfPints);
 
       this.setState({
