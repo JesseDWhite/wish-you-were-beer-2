@@ -11,10 +11,7 @@ class TapRoomControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // formVisisbleOnPage: false,
-      // masterTapList: [],
       selectedTap: null
-      // editing: false,
     };
   }
 
@@ -51,7 +48,7 @@ class TapRoomControl extends React.Component {
         selectedTap: null
       })
     } else {
-      console.log("you clicked it yah dumb dumb")
+      console.log("you clicked it yah dumb dumb");
       dispatch(action);
     }
   }
@@ -62,15 +59,6 @@ class TapRoomControl extends React.Component {
     dispatch(action);
   }
 
-  // handleAddingNewTapToList = (newTap) => {
-  //   const newMasterTapList = this.state.masterTapList.concat(newTap);
-
-  //   this.setState({
-  //     masterTapList: newMasterTapList,
-  //     formVisisbleOnPage: false
-  //   });
-  // }
-
   handleAddingNewTapToList = (newTap) => {
     const { dispatch } = this.props;
     const action = a.addTap(newTap);
@@ -78,16 +66,6 @@ class TapRoomControl extends React.Component {
     const action2 = a.toggleForm();
     dispatch(action2);
   }
-
-  // handleEditingTapInList = (tapToEdit) => {
-  //   const editMasterTapList = this.state.masterTapList.filter(tap => tap.id !== this.state.selectedTap.id).concat(tapToEdit);
-
-  //   this.setState({
-  //     masterTapList: editMasterTapList,
-  //     editing: false,
-  //     selectedTap: null
-  //   });
-  // }
 
   handleEditingTapInList = (tapToEdit) => {
     const { dispatch } = this.props;
@@ -99,15 +77,6 @@ class TapRoomControl extends React.Component {
       selectedTap: null
     })
   }
-
-  // handleDeletingTap = (id) => {
-  //   const newMasterTapList = this.state.masterTapList.filter(tap => tap.id !== id);
-
-  //   this.setState({
-  //     masterTapList: newMasterTapList,
-  //     selectedTap: null
-  //   });
-  // }
 
   handleDeletingTap = (id) => {
     const { dispatch } = this.props;
