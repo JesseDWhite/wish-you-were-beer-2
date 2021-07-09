@@ -1,12 +1,12 @@
+/* eslint-disable import/no-anonymous-default-export */
 // import sampleTap from '../static/sampleTap.json'
 import * as c from '../actions/ActionTypes'
 
-const tapListReducer = (state = {}, action) => {
+export default (state = {}, action) => {
   const { name, brand, price, alcoholContent, pints, id } = action;
   switch (action.type) {
     case c.ADD_TAP:
-      return {
-        ...state,
+      return Object.assign({}, state, {
         [id]: {
           name,
           brand,
@@ -15,7 +15,7 @@ const tapListReducer = (state = {}, action) => {
           pints,
           id
         }
-      }
+      });
     case c.DELETE_TAP:
       const newState = { ...state };
       delete newState[id];
@@ -25,5 +25,3 @@ const tapListReducer = (state = {}, action) => {
   }
 
 }
-
-export default tapListReducer;
