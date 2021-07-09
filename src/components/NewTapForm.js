@@ -8,7 +8,14 @@ function NewTapForm(props) {
     event.preventDefault();
     const { name, brand, price, alcoholContent, pints } = event.target;
 
-    props.onNewTapCreation({ name: name.value, brand: brand.value, price: parseFloat(price.value).toFixed(2), alcoholContent: parseFloat(alcoholContent.value).toFixed(1), pints: parseInt(pints.value), id: v4() });
+    props.onNewTapCreation({
+      name: name.value,
+      brand: brand.value,
+      price: parseFloat(price.value).toFixed(2),
+      alcoholContent: parseFloat(alcoholContent.value).toFixed(1),
+      pints: parseInt(pints.value),
+      id: v4()
+    });
   };
 
   NewTapForm.propTypes = {
