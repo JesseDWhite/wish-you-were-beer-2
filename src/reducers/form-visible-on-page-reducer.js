@@ -1,6 +1,6 @@
 import * as c from '../actions/ActionTypes'
 
-const reducer = (state = false, action) => {
+const formVisibleOnPageReducer = (state = false, action) => {
   switch (action.type) {
     case c.TOGGLE_FORM:
       return !state;
@@ -9,4 +9,4 @@ const reducer = (state = false, action) => {
   }
 }
 
-export default reducer;
+export default formVisibleOnPageReducer;

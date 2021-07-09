@@ -1,7 +1,7 @@
 // import sampleTap from '../static/sampleTap.json'
 import * as c from '../actions/ActionTypes'
 
-const reducer = (state = {}, action) => {
+const tapListReducer = (state = {}, action) => {
   const { name, brand, price, alcoholContent, pints, id } = action;
   switch (action.type) {
     case c.ADD_TAP:
@@ -26,4 +26,4 @@ const reducer = (state = {}, action) => {
 
 }
 
-export default reducer;
+export default tapListReducer;
