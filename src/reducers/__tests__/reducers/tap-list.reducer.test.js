@@ -32,11 +32,11 @@ describe('tapListReducer', () => {
     pints: 124
   }
 
-  test('Should return default state if no aciton type is recognized', () => {
+  test('Should return default state if no action type is recognized', () => {
     expect(tapListReducer({}, { type: null })).toEqual({});
   })
 
-  test('Should successfully add anew tap to masterTapList', () => {
+  test('Should successfully add a new tap to masterTapList', () => {
     const { name, brand, price, alcoholContent, pints, id } = tapData;
     action = {
       type: c.ADD_TAP,
