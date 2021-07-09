@@ -11,8 +11,8 @@ class TapRoomControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // formVisisbleOnPage: false,
-      // masterTapList: [],
+      formVisisbleOnPage: false,
+      masterTapList: [],
       selectedTap: null,
       editing: false,
     };
