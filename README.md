@@ -4,7 +4,7 @@
 # _wish-you-were-beer-2_ 
 </div>
 
-#### _This is our 16th week project to cover the basics of React CRUD functionality._
+#### _This is our 17th week project to cover the basics of React CRUD functionality with a refactor to include Redux._
 #### By _Jesse White_
 ## Technologies Used
 * 📝 _HTML_
@@ -14,17 +14,18 @@
 * 💾 _Webpack_
 * 🥾 _Bootstrap_
 * ⚛ _React_
+* _Redux_
 ## 📜 Description
 _This application will allow the user to add kegs to their tap list for customers to buy. Each time a customer buys a pint, the total amount of pints remaining will decrease._
 ### 💻 Prerequisites
 * [Node](https://nodejs.org/en/)
 * A text editor like [VS Code](https://code.visualstudio.com/)
 ## 🏗 Setup/Installation Requirements
-1. Clone the repository: `$ git clone https://github.com/JesseDWhite/wish-you-were-beer`.
-2. Navigate to the `wish-you-were-beer/` directory on your computer.
+1. Clone the repository: `$ git clone https://github.com/JesseDWhite/wish-you-were-beer-2`.
+2. Navigate to the `wish-you-were-beer-2/` directory on your computer.
 3. Open with your preferred text editor to view the code base.
 4. To start a development server and view the project in the browser:
-    * _Navigate to `wish-you-were-beer/` in your command line_
+    * _Navigate to `wish-you-were-beer-2/` in your command line_
     * _Run the command `npm install` to install dependencies_
     * _Optionally, run the command `npm run build` to make a bundle of the files_
     * _Finally, run the command `npm run start` to start a development server_
