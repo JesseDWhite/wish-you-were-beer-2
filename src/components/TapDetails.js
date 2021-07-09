@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function TapDetails(props) {
-  const { tap, onClickingDelete } = props;
+  const { tap, onClickingDelete, handleSellingPint } = props;
 
   return (
     <React.Fragment>
@@ -11,6 +11,7 @@ function TapDetails(props) {
       <p>{tap.price}</p>
       <p>{tap.alcoholContent}</p>
       <p>{tap.pints}</p>
+      <button onClick={() => handleSellingPint()}>Sell Pint</button>
       <div class="row">
         <div class="col-6">
           <button className="btn btn-success mb-3 btn-custom" onClick={props.onClickingEdit}>Edit Tap Details</button>

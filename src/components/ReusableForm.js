@@ -41,11 +41,11 @@ function ReusableForm(props) {
             />
           </div>
           <div className="col-4 mb-5">
-            <label for='price' className='form-label'>Number of Pints Availible</label>
+            <label for='pints' className='form-label'>Number of Pints Availible</label>
             <input
               type='number'
               name='pints'
-              value='124'
+              initialvalue='124'
               placeholder='Number of Pints Availible'
               className='form-control mb-3'
             />
