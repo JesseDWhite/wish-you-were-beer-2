@@ -88,5 +88,5 @@ button {
 }
 
 #sell-button-img {
-  width: 45%;
+  max-width: 40%;
 }
