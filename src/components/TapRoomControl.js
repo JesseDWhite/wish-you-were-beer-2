@@ -43,20 +43,22 @@ class TapRoomControl extends React.Component {
   }
 
   handleClick = () => {
+    const { dispatch } = this.props;
+    const action = a.toggleForm();
     if (this.state.selectedTap != null) {
+      dispatch(action);
       this.setState({
-        selectedTap: null,
-        editing: false,
+        selectedTap: null
       })
     } else {
-      const { dispatch } = this.props;
-      const action = a.toggleForm();
       dispatch(action);
     }
   }
 
   handleEditClick = () => {
-    this.setState({ editing: true });
+    const { dispatch } = this.props;
+    const action = a.toggleForm();
+    dispatch(action);
   }
 
   // handleAddingNewTapToList = (newTap) => {
@@ -90,8 +92,9 @@ class TapRoomControl extends React.Component {
     const { dispatch } = this.props;
     const action = a.addTap(tapToEdit);
     dispatch(action);
+    const action2 = a.toggleForm(tapToEdit)
+    dispatch(action2);
     this.setState({
-      editing: false,
       selectedTap: null
     })
   }
