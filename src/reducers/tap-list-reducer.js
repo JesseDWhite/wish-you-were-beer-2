@@ -16,6 +16,10 @@ const reducer = (state = sampleTap, action) => {
           id
         }
       }
+    case c.DELETE_TAP:
+      const newState = { ...state };
+      delete newState[id];
+      return newState;
     default:
       return state;
   }
