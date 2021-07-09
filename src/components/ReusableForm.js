@@ -56,6 +56,7 @@ function ReusableForm(props) {
               placeholder='Number of Pints Availible'
               className='form-control mb-3'
               min="0"
+              max="124"
               required
             />
           </div>
