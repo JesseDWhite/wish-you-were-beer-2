@@ -6,6 +6,7 @@ import EditTapForm from './EditTapForm';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as a from './../actions'
+import { tap } from 'lodash';
 
 class TapRoomControl extends React.Component {
   constructor(props) {
@@ -75,14 +76,24 @@ class TapRoomControl extends React.Component {
     dispatch(action2);
   }
 
-  handleEditingTapInList = (tapToEdit) => {
-    const editMasterTapList = this.state.masterTapList.filter(tap => tap.id !== this.state.selectedTap.id).concat(tapToEdit);
+  // handleEditingTapInList = (tapToEdit) => {
+  //   const editMasterTapList = this.state.masterTapList.filter(tap => tap.id !== this.state.selectedTap.id).concat(tapToEdit);
 
+  //   this.setState({
+  //     masterTapList: editMasterTapList,
+  //     editing: false,
+  //     selectedTap: null
+  //   });
+  // }
+
+  handleEditingTapInList = (tapToEdit) => {
+    const { dispatch } = this.props;
+    const action = a.deleteTap(tapToEdit);
+    dispatch(action);
     this.setState({
-      masterTapList: editMasterTapList,
       editing: false,
       selectedTap: null
-    });
+    })
   }
 
   handleDeletingTap = (id) => {
