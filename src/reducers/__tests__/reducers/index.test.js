@@ -8,4 +8,9 @@ describe('Tap list actions', () => {
       id: 1
     });
   });
+  it('toggleForm should create TOGGLE_FORM action', () => {
+    expect(actions.toggleForm()).toEqual({
+      type: c.TOGGLE_FORM
+    })
+  })
 });
