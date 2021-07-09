@@ -13,7 +13,7 @@ class TapRoomControl extends React.Component {
     this.state = {
       // formVisisbleOnPage: false,
       // masterTapList: [],
-      selectedTap: null,
+      selectedTap: null
       // editing: false,
     };
   }
@@ -51,6 +51,7 @@ class TapRoomControl extends React.Component {
         selectedTap: null
       })
     } else {
+      console.log("you clicked it yah dumb dumb")
       dispatch(action);
     }
   }
@@ -153,7 +154,7 @@ class TapRoomControl extends React.Component {
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        <button className="btn btn-primary mt-3 btn-custom" onClick={this.props.handleClick}>{buttonText}</button>
+        <button className="btn btn-primary mt-3 btn-custom" onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     )
   }
