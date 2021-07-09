@@ -1,7 +1,7 @@
 <div align="center">
 <img src="https://media.giphy.com/media/giKfGiwQyNwLcl79th/giphy.gif" width="200px" />
 
-# _wish-you-were-beer_ 
+# _wish-you-were-beer-2_ 
 </div>
 
 #### _This is our 16th week project to cover the basics of React CRUD functionality._
