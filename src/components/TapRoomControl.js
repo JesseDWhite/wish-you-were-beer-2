@@ -12,8 +12,8 @@ class TapRoomControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisisbleOnPage: false,
-      masterTapList: [],
+      // formVisisbleOnPage: false,
+      // masterTapList: [],
       selectedTap: null,
       editing: false,
     };
@@ -138,11 +138,11 @@ class TapRoomControl extends React.Component {
       buttonText = "Return To Tap List";
     } else if (this.state.formVisisbleOnPage) {
       currentlyVisibleState = <NewTapForm
-        onNewTapCreation={this.handleAddingNewTapToList} />;
+        onNewTapCreation={this.props.handleAddingNewTapToList} />;
       buttonText = "Return to Tap List";
     } else {
       currentlyVisibleState = <TapList
-        tapList={this.state.masterTapList}
+        tapList={this.props.masterTapList}
         onTapSelection={this.handleChangingSelectedTap} />;
       buttonText = "Add New Tap"
     }
@@ -155,5 +155,19 @@ class TapRoomControl extends React.Component {
     )
   }
 }
+
+TapRoomControl.propTypes = {
+  masterTapList: PropTypes.object,
+  formVisisbleOnPage: PropTypes.bool
+}
+
+const mapStateToProps = state => {
+  return {
+    masterTapList: state.masterTapList,
+    formVisisbleOnPage: state.formVisisbleOnPage
+  }
+}
+
+TapRoomControl = connect(mapStateToProps)(TapRoomControl);
 
 export default TapRoomControl;

@@ -14,7 +14,7 @@
 * 💾 _Webpack_
 * 🥾 _Bootstrap_
 * ⚛ _React_
-* _Redux_
+* 🧙‍♂️ _Redux_
 ## 📜 Description
 _This application will allow the user to add kegs to their tap list for customers to buy. Each time a customer buys a pint, the total amount of pints remaining will decrease._
 ### 💻 Prerequisites
