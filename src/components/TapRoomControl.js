@@ -141,7 +141,7 @@ class TapRoomControl extends React.Component {
       buttonText = "Return To Tap List";
     } else if (this.props.formVisisbleOnPage) {
       currentlyVisibleState = <NewTapForm
-        handleAddingNewTapToList={this.props.handleAddingNewTapToList} />;
+        handleAddingNewTapToList={this.handleAddingNewTapToList} />;
       buttonText = "Return to Tap List";
     } else {
       currentlyVisibleState = <TapList

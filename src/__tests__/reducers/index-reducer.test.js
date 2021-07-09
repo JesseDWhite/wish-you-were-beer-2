@@ -1,7 +1,7 @@
-import rootReducer from "../../index";
+import rootReducer from "../../reducers/index";
 import { createStore } from "redux";
-import tapListReducer from '../../tap-list-reducer';
-import formVisibleOnPage from '../../form-visible-on-page-reducer'
+import tapListReducer from '../../reducers/tap-list-reducer';
+import formVisibleOnPage from '../../reducers/form-visible-on-page-reducer'
 
 describe("rootReducer", () => {
   let store = createStore(rootReducer);

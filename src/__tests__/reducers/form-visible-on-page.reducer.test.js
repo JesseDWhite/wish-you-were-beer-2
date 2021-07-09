@@ -1,5 +1,5 @@
-import formVisibleOnPage from '../../form-visible-on-page-reducer'
-import * as c from '../../../actions/ActionTypes';
+import formVisibleOnPage from '../../reducers/form-visible-on-page-reducer'
+import * as c from '../../actions/ActionTypes';
 
 describe('formVisibleOnPage', () => {
   test('Should return default state if no action type is recognized', () => {
