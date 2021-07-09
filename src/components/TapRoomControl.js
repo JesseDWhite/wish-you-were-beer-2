@@ -3,6 +3,9 @@ import TapList from './TapList';
 import TapDetails from './TapDetails';
 import NewTapForm from './NewTapForm';
 import EditTapForm from './EditTapForm';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import * as a from './../actions'
 
 class TapRoomControl extends React.Component {
   constructor(props) {
@@ -55,13 +58,21 @@ class TapRoomControl extends React.Component {
     this.setState({ editing: true });
   }
 
-  handleAddingNewTapToList = (newTap) => {
-    const newMasterTapList = this.state.masterTapList.concat(newTap);
+  // handleAddingNewTapToList = (newTap) => {
+  //   const newMasterTapList = this.state.masterTapList.concat(newTap);
 
-    this.setState({
-      masterTapList: newMasterTapList,
-      formVisisbleOnPage: false
-    });
+  //   this.setState({
+  //     masterTapList: newMasterTapList,
+  //     formVisisbleOnPage: false
+  //   });
+  // }
+
+  handleAddingNewTapToList = (newTap) => {
+    const { dispatch } = this.props;
+    const action = a.addTap(newTap);
+    dispatch(action);
+    const action2 = a.toggleForm();
+    dispatch(action2);
   }
 
   handleEditingTapInList = (tapToEdit) => {
