@@ -2,12 +2,12 @@ import React from 'react';
 import Tap from './Tap';
 import PropTypes from 'prop-types';
 
-function TapList(props) {
+function TapList(props, onTapSelection) {
   return (
     <React.Fragment>
       {Object.values(props.tapList).map((tap) =>
         <Tap
-          whenTapClicked={props.onTapSelection}
+          whenTapClicked={onTapSelection}
           handleSellingPint={props.handleSellingPint}
           name={tap.name}
           brand={tap.brand}
