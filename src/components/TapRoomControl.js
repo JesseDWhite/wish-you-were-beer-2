@@ -48,6 +48,10 @@ class TapRoomControl extends React.Component {
         selectedTap: null,
         editing: false,
       })
+    } else {
+      const { dispatch } = this.props;
+      const action = a.toggleForm();
+      dispatch(action);
     }
   }
 
@@ -84,7 +88,7 @@ class TapRoomControl extends React.Component {
 
   handleEditingTapInList = (tapToEdit) => {
     const { dispatch } = this.props;
-    const action = a.deleteTap(tapToEdit);
+    const action = a.addTap(tapToEdit);
     dispatch(action);
     this.setState({
       editing: false,
