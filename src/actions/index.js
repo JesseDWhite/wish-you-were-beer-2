@@ -5,6 +5,6 @@ export const deleteTap = id => ({
   id
 });
 
-export const toggleForm = id => ({
-  type: "false"
+export const toggleForm = () => ({
+  type: c.TOGGLE_FORM
 });
