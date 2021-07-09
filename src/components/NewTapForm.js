@@ -8,7 +8,7 @@ function NewTapForm(props) {
     event.preventDefault();
     const { name, brand, price, alcoholContent, pints } = event.target;
 
-    props.onNewTapCreation({
+    props.handleAddingNewTapToList({
       name: name.value,
       brand: brand.value,
       price: parseFloat(price.value).toFixed(2),
@@ -19,7 +19,7 @@ function NewTapForm(props) {
   };
 
   NewTapForm.propTypes = {
-    onNewTapCreation: PropTypes.func,
+    handleAddingNewTapToList: PropTypes.func,
   };
 
   return (
