@@ -11,7 +11,7 @@ describe('tapListReducer', () => {
       price: 12.99,
       alcoholContent: 6.7,
       pints: 124,
-      id: 2
+      id: 1
     },
     2: {
       name: "name",

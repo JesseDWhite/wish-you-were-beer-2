@@ -1,4 +1,4 @@
-import * as actions from '../../../actions/index';
+import * as actions from '../../../actions';
 import * as c from '../../../actions/ActionTypes';
 
 describe('Tap list actions', () => {
@@ -12,5 +12,24 @@ describe('Tap list actions', () => {
     expect(actions.toggleForm()).toEqual({
       type: c.TOGGLE_FORM
     })
+  })
+  it('addTap should create an ADD_TAP action', () => {
+    expect(actions.addTap({
+      type: c.ADD_TAP,
+      name: "name",
+      brand: "brand",
+      price: 12.99,
+      alcoholContent: 6.7,
+      pints: 124,
+      id: 1
+    })).toEqual({
+      type: c.ADD_TAP,
+      name: "name",
+      brand: "brand",
+      price: 12.99,
+      alcoholContent: 6.7,
+      pints: 124,
+      id: 1
+    });
   })
 });
